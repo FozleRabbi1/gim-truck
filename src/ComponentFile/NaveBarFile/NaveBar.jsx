@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import "./NaveBar.css";
 import { Transition } from "@headlessui/react";
+import { Link } from 'react-router-dom';
 
 const NaveBar = () => {
     // const [navbar, setNavbar] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div>
-            <nav className="bg-gray-800">
+        <div className='sticky top-0'>
+            <nav className="bg-gray-800 ">
                 {/* <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8"> */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex  items-center justify-between h-16">
-                        <div className="flex items-center">
+                        <div className="flex w-full justify-between items-center">
                             <div className="flex-shrink-0">
                                 <img
                                     className="h-8 w-8"
@@ -22,40 +23,40 @@ const NaveBar = () => {
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/"
                                         className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Dashboard
-                                    </a>
+                                        Home
+                                    </Link>
 
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/ditles"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Team
-                                    </a>
+                                       Show-Ditles
+                                    </Link>
 
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/dashbord"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Projects
-                                    </a>
+                                        Dashbord
+                                    </Link>
 
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/contact"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Calendar
-                                    </a>
+                                        Contact-Us
+                                    </Link>
 
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="/users"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
-                                        Reports
-                                    </a>
+                                        Users
+                                    </Link>
                                 </div>
                             </div>
 

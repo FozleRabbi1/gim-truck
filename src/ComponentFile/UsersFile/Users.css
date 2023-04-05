@@ -1,0 +1,21 @@
+.single-cert-style{
+    box-shadow: 1px 1px 5px gray;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.single-cert-style:hover{
+    box-shadow: 5px 10px 25px gray;
+}
+.logo-style{
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid gray;
+    border-radius: 36% 64% 33% 67% / 54% 31% 69% 46%   ;
+    animation: logoBorder 3s  infinite;
+}
+@keyframes logoBorder {
+    0%{border-radius: 65% 35% 59% 41% / 39% 52% 48% 61% ;}    
+    50%{border-radius: 72% 28% 70% 30% / 27% 66% 34% 73% ;}    
+    100%{border-radius: 37% 63% 40% 60% / 50% 35% 65% 50% ;}    
+}

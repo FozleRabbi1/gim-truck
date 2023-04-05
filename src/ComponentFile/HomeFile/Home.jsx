@@ -8,12 +8,10 @@ import Banner from './Banner';
 const Home = () => {
     return (
         <div>
-            <NaveBar></NaveBar>
+            {/* <NaveBar></NaveBar> */}
             {/* <RowNav></RowNav> */}
             <Banner></Banner>
-
-
-
+            
             <PriceCaer></PriceCaer>
 
         </div>

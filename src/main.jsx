@@ -10,6 +10,7 @@ import Contact from './ComponentFile/ContectFile/Contact'
 import Users from './ComponentFile/UsersFile/Users'
 import ShowUserInfo from './ComponentFile/UsersFile/ShowUserInfo'
 import { data } from 'autoprefixer'
+import Notfound from './ComponentFile/NotfoundFile/Notfound'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,8 @@ const router = createBrowserRouter([
       {
         path: "user/:userId", element: <ShowUserInfo></ShowUserInfo>,
         loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`)
-      }
+      },
+      {path : "*", element : <Notfound></Notfound>}
 
     ]
   },

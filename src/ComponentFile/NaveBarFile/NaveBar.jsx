@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./NaveBar.css";
 import { Transition } from "@headlessui/react";
 import { Link } from 'react-router-dom';
+import ActiveLink from './ActiveLink/ActiveLink';
 
 const NaveBar = () => {
     // const [navbar, setNavbar] = useState(false);
@@ -23,40 +24,40 @@ const NaveBar = () => {
                             </div>
                             <div className="hidden md:block">
                                 <div className="ml-10 flex items-baseline space-x-4">
-                                    <Link
+                                    <ActiveLink
                                         to="/"
                                         className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Home
-                                    </Link>
+                                    </ActiveLink>
 
-                                    <Link
+                                    <ActiveLink
                                         to="/ditles"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                        Show-Ditles
-                                    </Link>
+                                    </ActiveLink>
 
-                                    <Link
+                                    <ActiveLink
                                         to="/dashbord"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Dashbord
-                                    </Link>
+                                    </ActiveLink>
 
-                                    <Link
+                                    <ActiveLink
                                         to="/contact"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Contact-Us
-                                    </Link>
+                                    </ActiveLink>
 
-                                    <Link
+                                    <ActiveLink
                                         to="/users"
                                         className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                                     >
                                         Users
-                                    </Link>
+                                    </ActiveLink>
                                 </div>
                             </div>
 

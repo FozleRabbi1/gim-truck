@@ -4,18 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './ComponentFile/HomeFile/Home'
 import NaveBar from './ComponentFile/NaveBarFile/NaveBar'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigation } from 'react-router-dom'
+import Loading from './ComponentFile/LoadingSpinner/Loading'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const navigation = useNavigation();
 
   return (
     <div className="App">
-     {/* <Home></Home> */}
-     <NaveBar></NaveBar>
-     <Outlet></Outlet>
+      {/* <Home></Home> */}
+      <NaveBar></NaveBar>
+      <div className='text-center'> {navigation.state === "loading" && <Loading></Loading>} </div>
+      <Outlet></Outlet>
 
-     
+
     </div>
   )
 }
